@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    height: 80px;
+}
+
+.logo a {
+    font-size: 18px;
+    color: cadetblue;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.logo-marcado {
+    color: rgb(253, 161, 176);
+}
+
+.menu a {
+    color: cadetblue;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.iconos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.iconos a i {
+    color: cadetblue;
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.contenido-principal {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.imagen-fondo {
+    position: absolute;
+    filter: brightness(0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.texto {
+    position: absolute;
+    bottom: 100px;
+    left: 40px;
+    color: white;
+    max-width: 90%;
+    letter-spacing: 2px;
+}
+
+.texto p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    font: bold;
+}
+
+.texto h2 {
+    font-weight: normal;    
+}
+
+.botones {
+    position: absolute;
+    bottom: 5px; 
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.botones button {
+    background-color: rgb(253, 161, 176);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.para-mi {
+    padding: 10px 5px;
+    font-size: 10px;
+    width: 120px;
+    height: 30px;
+}
+
+.planet-skin-club {
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-left: -22px;
+}
+
+.planet-skin-club i {
+    margin-right: 8px;
+}
+
+
+.boton-chat {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chat {
+    background-color: rgb(253, 161, 176);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 4;
+}
+
+.boton-menu {
+    color: cadetblue;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+@media (max-width: 480px) {
+    .menu-desplegable {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        background-color: white;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .boton-menu:focus + .menu,
+    .menu:hover {
+        display: flex;
+    }
+
+    .iconos {
+        position: absolute;
+        right: 20px;
+        transform: scale(0.8);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-70%);/
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 200px;
+        background-color: white;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .iconos {
+        position: absolute;
+        right: 20px;
+    }
+}
